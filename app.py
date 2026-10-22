@@ -17,7 +17,7 @@ app = Flask(__name__)
 def get_connection():
     url = os.getenv("postgresql://saishrinivas:nqWtQi29Kzpe2mugomCCUQ@leafy-wren-35403.j77.aws-ap-south-1.cockroachlabs.cloud:26257/esports_db?sslmode=verify-full")
     if not url:
-        raise RuntimeError("DATABASE_URL is not set in this terminal.")
+        raise RuntimeError("postgresql://saishrinivas:nqWtQi29Kzpe2mugomCCUQ@leafy-wren-35403.j77.aws-ap-south-1.cockroachlabs.cloud:26257/esports_db?sslmode=verify-full is not set in this terminal.")
 
     parsed = urlparse(url)
     return pg8000.dbapi.connect(
