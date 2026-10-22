@@ -15,7 +15,7 @@ app = Flask(__name__)
 # =========================================================
 
 def get_connection():
-    url = os.getenv("DATABASE_URL")
+    url = os.getenv("postgresql://saishrinivas:nqWtQi29Kzpe2mugomCCUQ@leafy-wren-35403.j77.aws-ap-south-1.cockroachlabs.cloud:26257/esports_db?sslmode=verify-full")
     if not url:
         raise RuntimeError("DATABASE_URL is not set in this terminal.")
 
