@@ -5,7 +5,7 @@ import ssl
 import pg8000.dbapi
 
 try:
-    url = urlparse(os.environ["DATABASE_URL"])
+    url = urlparse(os.environ["postgresql://saishrinivas:nqWtQi29Kzpe2mugomCCUQ@leafy-wren-35403.j77.aws-ap-south-1.cockroachlabs.cloud:26257/esports_db?sslmode=verify-full"])
 
     conn = pg8000.dbapi.connect(
         user=unquote(url.username),
